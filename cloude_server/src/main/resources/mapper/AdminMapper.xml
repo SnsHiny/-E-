@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.SnHI.server.mapper.AdminMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.SnHI.server.pojo.Admin">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="telephone" property="telephone" />
+        <result column="address" property="address" />
+        <result column="enabled" property="enabled" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="userFace" property="userFace" />
+        <result column="remark" property="remark" />
+    </resultMap>
+    
+    <resultMap id="AdminWithRole" type="com.SnHI.server.pojo.Admin" extends="BaseResultMap">
+        <collection property="roles" ofType="com.SnHI.server.pojo.Role">
+            <id column="rid" property="id" />
+            <result column="role_name" property="name" />
+            <result column="role_nameZh" property="nameZh" />
+        </collection>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, phone, telephone, address, enabled, username, password, userFace, remark
+    </sql>
+
+    <!--    获取所有操作员-->
+    <select id="getAllAdmins" resultMap="AdminWithRole">
+        select t_admin.*, t_role.id as rid, t_role.name as role_name, t_role.nameZh as role_nameZh
+        from t_admin, t_role, t_admin_role
+        where t_admin.id = t_admin_role.adminId and t_admin_role.rid = t_role.id
+            and t_admin.id != #{id}
+            <if test="null != keyWords and '' != keyWords">
+                and t_admin.name like concat('%', #{keyWords}, '%')
+            </if>
+    </select>
+
+    <!--    获取当前登录用户信息-->
+    <select id="getLoginUserInfo" resultMap="AdminWithRole">
+        select t_admin.*, t_role.id as rid, t_role.name as role_name, t_role.nameZh as role_nameZh
+        from t_admin, t_role, t_admin_role
+        where t_admin.id = t_admin_role.adminId and t_admin_role.rid = t_role.id
+        and t_admin.username = #{userName}
+    </select>
+
+</mapper>
