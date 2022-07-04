@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 工资账套
+ * 工资账套管理接口
  */
 @Api(tags = "SalarySobCfgController员工账套接口")
 @RestController

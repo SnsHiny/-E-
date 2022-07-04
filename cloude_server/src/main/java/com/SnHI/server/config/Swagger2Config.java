@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Swagger2配置
+ * Swagger2接口文档配置
  * @since 1.0.0
  */
 @Configuration
@@ -38,8 +38,8 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         //设置文档信息
         return new ApiInfoBuilder()
-                .title("云E办接口文档")
-                .description("云E办接口文档")
+                .title("云上OA接口文档")
+                .description("云上OA接口文档")
                 .contact(new Contact("SnHI", "http:localhost:8081/doc.html", "670901080@qq.com"))
                 .version("1.0")
                 .build();

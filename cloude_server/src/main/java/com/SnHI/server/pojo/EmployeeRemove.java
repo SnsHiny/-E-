@@ -1,5 +1,6 @@
 package com.SnHI.server.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.time.LocalDate;
@@ -39,7 +40,7 @@ public class EmployeeRemove implements Serializable {
     private Integer afterDepId;
 
     @ApiModelProperty(value = "调动后职位")
-    private Integer afterJobId;
+    private Integer afterPosId;
 
     @ApiModelProperty(value = "调动日期")
     private LocalDate removeDate;
@@ -50,5 +51,16 @@ public class EmployeeRemove implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
+    @ApiModelProperty(value = "员工")
+    @TableField(exist = false)
+    private Employee employee;
+
+    @ApiModelProperty(value = "所属部门")
+    @TableField(exist = false)
+    private Department department;
+
+    @ApiModelProperty(value = "职位")
+    @TableField(exist = false)
+    private Position position;
 
 }

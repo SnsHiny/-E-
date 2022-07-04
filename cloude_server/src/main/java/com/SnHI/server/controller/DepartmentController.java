@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * <p>
- *  前端控制器
+ *  部门管理接口
  * </p>
  *
  * @author SnHI

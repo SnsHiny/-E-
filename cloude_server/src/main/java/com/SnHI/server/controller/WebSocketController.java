@@ -10,6 +10,14 @@ import org.springframework.stereotype.Controller;
 
 import java.time.LocalDateTime;
 
+/**
+ * <p>
+ *  聊天管理接口
+ * </p>
+ *
+ * @author SnHI
+ * @since 2022-03-01
+ */
 @Controller
 public class WebSocketController {
 

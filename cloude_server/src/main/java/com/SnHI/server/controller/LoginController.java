@@ -1,10 +1,8 @@
 package com.SnHI.server.controller;
 
 import com.SnHI.server.pojo.Admin;
-import com.SnHI.server.pojo.LoginAdmin;
 import com.SnHI.server.pojo.ResponseResult;
 import com.SnHI.server.service.IAdminService;
-import com.SnHI.server.service.MyUserDetailsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
 
+/**
+ * <p>
+ *  登录管理接口
+ * </p>
+ *
+ * @author SnHI
+ * @since 2022-03-01
+ */
 @Api(tags = "LoginController登录接口")
 @RestController
 public class LoginController {

@@ -1,5 +1,6 @@
 package com.SnHI.server.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.time.LocalDate;
@@ -34,6 +35,10 @@ public class EmployeeEc implements Serializable {
 
     @ApiModelProperty(value = "员工编号")
     private Integer eid;
+
+    @ApiModelProperty(value = "员工姓名")
+    @TableField(exist = false)
+    private String name;
 
     @ApiModelProperty(value = "奖罚日期")
     private LocalDate ecDate;

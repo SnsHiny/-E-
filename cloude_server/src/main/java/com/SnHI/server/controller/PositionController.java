@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * <p>
- *  前端控制器
+ *  职位管理接口
  * </p>
  *
  * @author SnHI

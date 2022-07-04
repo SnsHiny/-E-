@@ -16,4 +16,11 @@
         id, eid, trainDate, trainContent, remark
     </sql>
 
+    <!--    获取所有员工培训记录-->
+    <select id="getAllEmployeeTrain" resultType="com.SnHI.server.pojo.EmployeeTrain">
+        select t_employee_train.*, t_employee.name as name
+        from t_employee_train, t_employee
+        where t_employee_train.eid = t_employee.id
+    </select>
+
 </mapper>

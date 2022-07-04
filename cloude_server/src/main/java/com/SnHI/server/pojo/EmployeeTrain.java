@@ -1,15 +1,19 @@
 package com.SnHI.server.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.time.LocalDate;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -35,7 +39,12 @@ public class EmployeeTrain implements Serializable {
     @ApiModelProperty(value = "员工编号")
     private Integer eid;
 
-    @ApiModelProperty(value = "培训日期")
+    @ApiModelProperty(value = "员工姓名")
+    @TableField(exist = false)
+    private String name;
+
+    @ApiModelProperty(value = "培训日期", dataType = "java.time.LocalDate")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "Asia/Shanghai")
     private LocalDate trainDate;
 
     @ApiModelProperty(value = "培训内容")
@@ -43,6 +52,5 @@ public class EmployeeTrain implements Serializable {
 
     @ApiModelProperty(value = "备注")
     private String remark;
-
 
 }
