@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * 聊天人员
+ * 聊天接口
  */
 @Api(tags = "ChatController聊天接口")
 @RestController

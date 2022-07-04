@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * 权限接口
+ * 权限管理接口
  */
 @Api(tags = "permissionController权限接口")
 @RequestMapping("/system/basic/permiss")

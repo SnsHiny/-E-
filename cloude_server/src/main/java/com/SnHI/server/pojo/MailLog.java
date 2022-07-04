@@ -1,5 +1,7 @@
 package com.SnHI.server.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
 import java.io.Serializable;
@@ -27,6 +29,7 @@ public class MailLog implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "消息id")
+    @TableId(value = "msgId")
     private String msgId;
 
     @ApiModelProperty(value = "接收员工id")

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
 /**
- * 验证码配置类
+ * 验证码配置
  * @since 1.0.0
  */
 @Configuration

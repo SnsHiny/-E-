@@ -15,7 +15,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
- * 验证码Controller
+ * 验证码管理接口
  * @since 1.0.0
  */
 @Api(tags = "CaptchaController验证码接口")

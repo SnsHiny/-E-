@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- *  前端控制器
+ *  消息状态管理接口
  * </p>
  *
  * @author SnHI

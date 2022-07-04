@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * <p>
- *  前端控制器
+ *  菜单管理接口
  * </p>
  *
  * @author SnHI

@@ -18,4 +18,11 @@
         id, eid, asDate, beforeSalary, afterSalary, reason, remark
     </sql>
 
+    <!--    获取所有员工股调薪记录-->
+    <select id="getAllSalaryAdjust" resultType="com.SnHI.server.pojo.SalaryAdjust">
+        select t_salary_adjust.*, t_employee.name as name
+        from t_salary_adjust, t_employee
+        where t_salary_adjust.eid = t_employee.id
+    </select>
+
 </mapper>

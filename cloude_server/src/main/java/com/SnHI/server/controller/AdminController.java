@@ -23,7 +23,7 @@ import java.util.Map;
 
 /**
  * <p>
- *  前端控制器
+ *  用户管理接口
  * </p>
  *
  * @author SnHI

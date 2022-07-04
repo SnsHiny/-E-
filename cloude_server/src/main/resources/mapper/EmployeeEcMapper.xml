@@ -18,4 +18,11 @@
         id, eid, ecDate, ecReason, ecPoint, ecType, remark
     </sql>
 
+    <!--    获取所有员工奖惩记录-->
+    <select id="getAllEmployeeEc" resultType="com.SnHI.server.pojo.EmployeeEc">
+        select t_employee_ec.*, t_employee.name as name
+        from t_employee_ec, t_employee
+        where t_employee_ec.eid = t_employee.id
+    </select>
+
 </mapper>

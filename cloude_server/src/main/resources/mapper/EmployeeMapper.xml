@@ -37,24 +37,24 @@
 
     <resultMap id="EmployeeInfo" type="com.SnHI.server.pojo.Employee" extends="BaseResultMap">
         <association property="nation" javaType="com.SnHI.server.pojo.Nation">
-            <id column="nid" property="id"></id>
-            <result column="nName" property="name"></result>
+            <id column="nid" property="id"/>
+            <result column="nName" property="name"/>
         </association>
         <association property="politicsStatus" javaType="com.SnHI.server.pojo.PoliticsStatus">
-            <id column="pid" property="id"></id>
-            <result column="pName" property="name"></result>
+            <id column="pid" property="id"/>
+            <result column="pName" property="name"/>
         </association>
         <association property="department" javaType="com.SnHI.server.pojo.Department">
-            <id column="did" property="id"></id>
-            <result column="dName" property="name"></result>
+            <id column="did" property="id"/>
+            <result column="dName" property="name"/>
         </association>
         <association property="joblevel" javaType="com.SnHI.server.pojo.Joblevel">
-            <id column="jid" property="id"></id>
-            <result column="jName" property="name"></result>
+            <id column="jid" property="id"/>
+            <result column="jName" property="name"/>
         </association>
         <association property="position" javaType="com.SnHI.server.pojo.Position">
-            <id column="posid" property="id"></id>
-            <result column="posName" property="name"></result>
+            <id column="posid" property="id"/>
+            <result column="posName" property="name"/>
         </association>
     </resultMap>
 
@@ -170,6 +170,7 @@
             </if>
             ORDER BY e.id
     </select>
+
     <!--    获取所有员工账套-->
     <select id="getAllEmployeeWithSalary" resultMap="EmployeeWithSalary">
         SELECT

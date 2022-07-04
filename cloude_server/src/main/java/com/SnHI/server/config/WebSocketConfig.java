@@ -20,7 +20,7 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
 /**
- * WebSocket配置类
+ * WebSocket配置
  */
 @Configuration
 @EnableWebSocketMessageBroker
